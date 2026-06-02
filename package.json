@@ -1,0 +1,18 @@
+{
+  "name": "hohoemi-nursing-hp",
+  "version": "1.0.0",
+  "description": "ほほえみ訪問看護ステーション ホームページ",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --use-system-ca server.js",
+    "dev": "nodemon"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ほほえみ訪問看護ステーション - 英知を尽くして「生きる」を看る。24時間365日対応の訪問看護・リハビリサービス。">
+  <title>ほほえみ訪問看護ステーション</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- ===========================
+       お知らせバー（上部固定）
+       =========================== -->
+  <div class="info-bar">
+    <div class="container info-bar__inner">
+      <span class="info-bar__label">お知らせ</span>
+      <span class="info-bar__text">2024年4月より新ステーション（△△エリア）を開設しました。詳しくはお問い合わせください。</span>
+    </div>
+  </div>
+
+  <!-- ===========================
+       ヘッダー
+       =========================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <!-- ロゴ -->
+      <a href="#hero" class="header__logo">
+        <div class="header__logo-mark">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <rect width="36" height="36" rx="8" fill="#1558A8"/>
+            <path d="M18 8v20M8 18h20" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="header__logo-text">
+          <span class="header__logo-main">ほほえみ</span>
+          <span class="header__logo-sub">訪問看護ステーション</span>
+        </div>
+      </a>
+
+      <!-- PCナビゲーション -->
+      <nav class="nav" id="nav" aria-label="メインナビゲーション">
+        <ul class="nav__list">
+          <li><a href="#services" class="nav__link">サービス案内</a></li>
+          <li><a href="#flow" class="nav__link">ご利用の流れ</a></li>
+          <li><a href="#staff" class="nav__link">スタッフ紹介</a></li>
+          <li><a href="#news" class="nav__link">お知らせ</a></li>
+          <li><a href="#recruit" class="nav__link">採用情報</a></li>
+        </ul>
+      </nav>
+
+      <!-- 右側：電話＋お問い合わせボタン -->
+      <div class="header__right">
+        <a href="tel:0120XXXXXX" class="header__tel">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.22 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.16z"/>
+          </svg>
+          <span>0120-XXX-XXX</span>
+        </a>
+        <a href="#contact" class="btn btn--primary btn--sm">相談・お問い合わせ</a>
+      </div>
+
+      <!-- ハンバーガー（スマホ） -->
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===========================
+         ヒーローセクション
+         =========================== -->
+    <section class="hero" id="hero">
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__photo" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__label">訪問看護・リハビリテーション</p>
+          <h1 class="hero__title">
+            英知を尽くして、<br>
+            <em>「生きる」</em>を看る。
+          </h1>
+          <p class="hero__desc">
+            住み慣れた自宅で、その人らしく生きるために。専門の看護師・療法士が地域に寄り添い、24時間365日のケアを提供しています。
+          </p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--white btn--lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.22 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.16z"/>
+              </svg>
+              まずは無料相談
+            </a>
+            <a href="#services" class="btn btn--outline-white btn--lg">サービスを見る</a>
+          </div>
+        </div>
+
+        <!-- ヒーロー右側の実績カード -->
+        <div class="hero__stats" aria-label="実績">
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-count="500">0</span>
+            <span class="hero__stat-unit">世帯以上</span>
+            <span class="hero__stat-label">対応実績</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-count="98">0</span>
+            <span class="hero__stat-unit">%</span>
+            <span class="hero__stat-label">利用者満足度</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-count="24">0</span>
+            <span class="hero__stat-unit">h</span>
+            <span class="hero__stat-label">緊急対応体制</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" data-count="20">0</span>
+            <span class="hero__stat-unit">年以上</span>
+            <span class="hero__stat-label">地域での実績</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- スクロール誘導 -->
+      <a href="#services" class="hero__scroll" aria-label="下へスクロール">
+        <span>SCROLL</span>
+        <div class="hero__scroll-arrow" aria-hidden="true"></div>
+      </a>
+    </section>
+
+    <!-- ===========================
+         サービスセクション
+         =========================== -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Services</p>
+          <h2 class="section-title">サービス案内</h2>
+          <p class="section-desc">医療保険・介護保険どちらにも対応。ご本人の状態に合わせてご提案します。</p>
+        </div>
+
+        <div class="services__grid">
+          <!-- 訪問看護 -->
+          <article class="service-card fade-in">
+            <div class="service-card__photo service-card__photo--1" aria-hidden="true">
+              <div class="service-card__photo-inner">
+                <span class="service-card__photo-tag">医療保険・介護保険</span>
+              </div>
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">訪問看護</h3>
+              <p class="service-card__desc">看護師が自宅に訪問し、医療的ケア・健康管理・療養支援を行います。主治医と連携しながら、安心の在宅療養を支えます。</p>
+              <ul class="service-card__list">
+                <li>バイタルチェック・健康観察</li>
+                <li>医療処置（点滴・創傷ケアなど）</li>
+                <li>服薬管理・指導</li>
+                <li>ターミナルケア</li>
+              </ul>
+              <a href="#contact" class="service-card__link">詳しく見る →</a>
+            </div>
+          </article>
+
+          <!-- リハビリ -->
+          <article class="service-card fade-in">
+            <div class="service-card__photo service-card__photo--2" aria-hidden="true">
+              <div class="service-card__photo-inner">
+                <span class="service-card__photo-tag">介護保険・医療保険</span>
+              </div>
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">訪問リハビリテーション</h3>
+              <p class="service-card__desc">理学療法士・作業療法士が自宅を訪問。身体機能の回復・維持と、日常生活の自立を目指した個別リハビリを提供します。</p>
+              <ul class="service-card__list">
+                <li>機能回復・維持訓練</li>
+                <li>歩行・移動動作訓練</li>
+                <li>日常生活動作の練習</li>
+                <li>住環境整備のアドバイス</li>
+              </ul>
+              <a href="#contact" class="service-card__link">詳しく見る →</a>
+            </div>
+          </article>
+
+          <!-- 精神科 -->
+          <article class="service-card fade-in">
+            <div class="service-card__photo service-card__photo--3" aria-hidden="true">
+              <div class="service-card__photo-inner">
+                <span class="service-card__photo-tag">医療保険</span>
+              </div>
+            </div>
+            <div class="service-card__body">
+              <h3 class="service-card__title">精神科訪問看護</h3>
+              <p class="service-card__desc">精神疾患をお持ちの方が地域で安心して生活できるよう、服薬管理・生活リズムの調整・ご家族へのサポートを行います。</p>
+              <ul class="service-card__list">
+                <li>服薬管理・指導</li>
+                <li>生活リズムの支援</li>
+                <li>家族へのケア指導</li>
+                <li>社会復帰のサポート</li>
+              </ul>
+              <a href="#contact" class="service-card__link">詳しく見る →</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- 保険対応の補足 -->
+        <div class="services__note fade-in">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1558A8" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/>
+          </svg>
+          <p>費用や対象となる保険など、わからないことはお気軽にご相談ください。担当スタッフが丁寧にご説明します。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         実績・数字セクション
+         =========================== -->
+    <section class="numbers" id="numbers">
+      <div class="numbers__bg" aria-hidden="true"></div>
+      <div class="container numbers__inner">
+        <div class="section-header section-header--light">
+          <p class="section-label">Our Record</p>
+          <h2 class="section-title">私たちの実績</h2>
+        </div>
+        <div class="numbers__grid">
+          <div class="number-item fade-in">
+            <span class="number-item__num" data-count="500">0</span>
+            <span class="number-item__unit">世帯以上</span>
+            <span class="number-item__label">累計対応実績</span>
+          </div>
+          <div class="number-item fade-in">
+            <span class="number-item__num" data-count="45">0</span>
+            <span class="number-item__unit">名</span>
+            <span class="number-item__label">専門スタッフ数</span>
+          </div>
+          <div class="number-item fade-in">
+            <span class="number-item__num" data-count="98">0</span>
+            <span class="number-item__unit">%</span>
+            <span class="number-item__label">利用者満足度</span>
+          </div>
+          <div class="number-item fade-in">
+            <span class="number-item__num" data-count="20">0</span>
+            <span class="number-item__unit">年以上</span>
+            <span class="number-item__label">地域での実績</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         代表メッセージセクション
+         =========================== -->
+    <section class="message" id="message">
+      <div class="container message__inner">
+        <!-- 写真エリア -->
+        <div class="message__photo fade-in" aria-hidden="true">
+          <div class="message__photo-placeholder">
+            <img
+              src="https://images.unsplash.com/photo-1484863137850-59afcfe05386?auto=format&fit=crop&w=600&q=80"
+              alt="代表 山田花子"
+              class="message__photo-img"
+              loading="lazy"
+            >
+          </div>
+          <div class="message__photo-caption">
+            <strong>山田 花子</strong>
+            <span>代表 / 看護師長</span>
+          </div>
+        </div>
+
+        <!-- テキストエリア -->
+        <div class="message__content fade-in">
+          <p class="section-label">Message</p>
+          <h2 class="message__title">代表からのメッセージ</h2>
+          <div class="message__body">
+            <p>私たちほほえみ訪問看護ステーションは、「住み慣れた場所で、その人らしく生きる」を理念に、地域の皆様に寄り添った看護を提供してまいりました。</p>
+            <p>病気や障がいがあっても、ご自宅で家族と過ごしたい。その思いに応えるために、私たちは24時間365日、専門スタッフが連携してサポートする体制を整えています。</p>
+            <p>看護の力で、一人ひとりの「生きる」を支える。それが私たちの使命です。どんな小さなことでも、まずはお気軽にご相談ください。</p>
+          </div>
+          <a href="#contact" class="btn btn--primary">ご相談・お問い合わせ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         ご利用の流れセクション
+         =========================== -->
+    <section class="flow" id="flow">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">How to Start</p>
+          <h2 class="section-title">ご利用の流れ</h2>
+          <p class="section-desc">初めての方でも安心してスタートできます</p>
+        </div>
+
+        <div class="flow__list">
+          <div class="flow-step fade-in">
+            <div class="flow-step__icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <path d="M28 20a2 2 0 01-2 2H10l-5 5V6a2 2 0 012-2h19a2 2 0 012 2z"/>
+              </svg>
+            </div>
+            <div class="flow-step__num">STEP 01</div>
+            <h3 class="flow-step__title">お問い合わせ・ご相談</h3>
+            <p class="flow-step__desc">電話またはWebフォームからご連絡ください。ご本人・ご家族・ケアマネージャーどなたからでも構いません。</p>
+          </div>
+
+          <div class="flow-step__connector" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1558A8" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div class="flow-step fade-in">
+            <div class="flow-step__icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <path d="M16 3a13 13 0 100 26A13 13 0 0016 3z"/>
+                <path d="M16 8v8l5 3"/>
+              </svg>
+            </div>
+            <div class="flow-step__num">STEP 02</div>
+            <h3 class="flow-step__title">無料相談・アセスメント</h3>
+            <p class="flow-step__desc">担当スタッフがご自宅または電話で状況を確認。現在の体調・生活環境・ご要望を丁寧にお伺いします。</p>
+          </div>
+
+          <div class="flow-step__connector" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1558A8" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div class="flow-step fade-in">
+            <div class="flow-step__icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <rect x="4" y="4" width="24" height="26" rx="2"/>
+                <path d="M10 4V2M22 4V2M4 12h24"/>
+                <path d="M10 18h4M10 23h8"/>
+              </svg>
+            </div>
+            <div class="flow-step__num">STEP 03</div>
+            <h3 class="flow-step__title">ケアプラン作成</h3>
+            <p class="flow-step__desc">主治医・ケアマネージャーと連携し、ご本人に合ったケア計画を立案。内容はわかりやすくご説明します。</p>
+          </div>
+
+          <div class="flow-step__connector" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1558A8" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div class="flow-step fade-in">
+            <div class="flow-step__icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <path d="M3 12l9-9 9 9v13a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                <path d="M12 27V18h8v9"/>
+              </svg>
+            </div>
+            <div class="flow-step__num">STEP 04</div>
+            <h3 class="flow-step__title">訪問看護スタート</h3>
+            <p class="flow-step__desc">定期訪問を開始します。状態の変化に合わせて柔軟に対応。24時間緊急サポートも万全の体制で行います。</p>
+          </div>
+        </div>
+
+        <p class="flow__note fade-in">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1558A8" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/>
+          </svg>
+          ご相談・アセスメントは無料です。まずはお気軽にご連絡ください。
+        </p>
+      </div>
+    </section>
+
+    <!-- ===========================
+         スタッフ紹介セクション
+         =========================== -->
+    <section class="staff" id="staff">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Our Team</p>
+          <h2 class="section-title">スタッフ紹介</h2>
+          <p class="section-desc">多職種の専門家が連携して、あなたのケアを支えます</p>
+        </div>
+
+        <div class="staff__grid">
+          <article class="staff-card fade-in">
+            <div class="staff-card__photo staff-card__photo--1">
+              <div class="staff-card__avatar">
+                <svg width="64" height="96" viewBox="0 0 64 96" fill="none" aria-hidden="true">
+                  <circle cx="32" cy="28" r="20" fill="white" opacity="0.7"/>
+                  <ellipse cx="32" cy="80" rx="28" ry="18" fill="white" opacity="0.7"/>
+                </svg>
+              </div>
+            </div>
+            <div class="staff-card__body">
+              <div class="staff-card__role">管理者 / 看護師</div>
+              <h3 class="staff-card__name">山田 花子</h3>
+              <p class="staff-card__career">看護師歴 15年｜訪問看護専門</p>
+              <p class="staff-card__message">「一人ひとりの生活に寄り添い、笑顔を引き出せるケアを心がけています」</p>
+            </div>
+          </article>
+
+          <article class="staff-card fade-in">
+            <div class="staff-card__photo staff-card__photo--2">
+              <div class="staff-card__avatar">
+                <svg width="64" height="96" viewBox="0 0 64 96" fill="none" aria-hidden="true">
+                  <circle cx="32" cy="28" r="20" fill="white" opacity="0.7"/>
+                  <ellipse cx="32" cy="80" rx="28" ry="18" fill="white" opacity="0.7"/>
+                </svg>
+              </div>
+            </div>
+            <div class="staff-card__body">
+              <div class="staff-card__role">理学療法士</div>
+              <h3 class="staff-card__name">鈴木 太郎</h3>
+              <p class="staff-card__career">PT歴 10年｜神経リハビリ専門</p>
+              <p class="staff-card__message">「在宅での生活を最大限サポートするリハビリを提供します」</p>
+            </div>
+          </article>
+
+          <article class="staff-card fade-in">
+            <div class="staff-card__photo staff-card__photo--3">
+              <div class="staff-card__avatar">
+                <svg width="64" height="96" viewBox="0 0 64 96" fill="none" aria-hidden="true">
+                  <circle cx="32" cy="28" r="20" fill="white" opacity="0.7"/>
+                  <ellipse cx="32" cy="80" rx="28" ry="18" fill="white" opacity="0.7"/>
+                </svg>
+              </div>
+            </div>
+            <div class="staff-card__body">
+              <div class="staff-card__role">作業療法士</div>
+              <h3 class="staff-card__name">田中 誠</h3>
+              <p class="staff-card__career">OT歴 8年｜生活リハビリ専門</p>
+              <p class="staff-card__message">「その人の暮らしを豊かにする作業療法を実践しています」</p>
+            </div>
+          </article>
+
+          <article class="staff-card fade-in">
+            <div class="staff-card__photo staff-card__photo--4">
+              <div class="staff-card__avatar">
+                <svg width="64" height="96" viewBox="0 0 64 96" fill="none" aria-hidden="true">
+                  <circle cx="32" cy="28" r="20" fill="white" opacity="0.7"/>
+                  <ellipse cx="32" cy="80" rx="28" ry="18" fill="white" opacity="0.7"/>
+                </svg>
+              </div>
+            </div>
+            <div class="staff-card__body">
+              <div class="staff-card__role">看護師 / 精神科専門</div>
+              <h3 class="staff-card__name">佐藤 美咲</h3>
+              <p class="staff-card__career">看護師歴 8年｜精神科・地域ケア</p>
+              <p class="staff-card__message">「心に寄り添い、地域で安心して暮らせるお手伝いをします」</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         お知らせ・ニュースセクション
+         =========================== -->
+    <section class="news" id="news">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">News</p>
+          <h2 class="section-title">お知らせ</h2>
+        </div>
+
+        <ul class="news__list">
+          <li class="news-item fade-in">
+            <time class="news-item__date" datetime="2024-04-01">2024.04.01</time>
+            <span class="news-item__tag news-item__tag--new">新着</span>
+            <a href="#" class="news-item__title">△△エリアに新しい訪問看護ステーションを開設しました</a>
+          </li>
+          <li class="news-item fade-in">
+            <time class="news-item__date" datetime="2024-03-15">2024.03.15</time>
+            <span class="news-item__tag news-item__tag--info">お知らせ</span>
+            <a href="#" class="news-item__title">2024年度 サービス内容・料金改定のご案内</a>
+          </li>
+          <li class="news-item fade-in">
+            <time class="news-item__date" datetime="2024-02-20">2024.02.20</time>
+            <span class="news-item__tag news-item__tag--info">お知らせ</span>
+            <a href="#" class="news-item__title">春の無料健康相談会を開催します（3月8日・9日）</a>
+          </li>
+          <li class="news-item fade-in">
+            <time class="news-item__date" datetime="2024-01-10">2024.01.10</time>
+            <span class="news-item__tag news-item__tag--recruit">採用</span>
+            <a href="#" class="news-item__title">2024年度 看護師・理学療法士の採用を開始しました</a>
+          </li>
+          <li class="news-item fade-in">
+            <time class="news-item__date" datetime="2023-12-01">2023.12.01</time>
+            <span class="news-item__tag news-item__tag--info">お知らせ</span>
+            <a href="#" class="news-item__title">年末年始の訪問スケジュールについて（12/29〜1/3も対応）</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===========================
+         採用情報バナー
+         =========================== -->
+    <section class="recruit" id="recruit">
+      <div class="container recruit__inner">
+        <div class="recruit__content fade-in">
+          <p class="section-label">Recruit</p>
+          <h2 class="recruit__title">一緒に「生きる」を<br>支えませんか？</h2>
+          <p class="recruit__desc">看護師・理学療法士・作業療法士・言語聴覚士を募集しています。地域医療に情熱を持つ仲間を歓迎します。</p>
+          <div class="recruit__actions">
+            <a href="#contact" class="btn btn--white">採用情報を見る</a>
+            <a href="#contact" class="btn btn--outline-white">エントリーする</a>
+          </div>
+        </div>
+        <div class="recruit__visual" aria-hidden="true">
+          <div class="recruit__visual-circle"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         FAQセクション
+         =========================== -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">FAQ</p>
+          <h2 class="section-title">よくある質問</h2>
+        </div>
+
+        <div class="faq__list">
+          <div class="faq-item fade-in">
+            <button class="faq-item__q" aria-expanded="false">
+              <span>訪問看護を利用するには何が必要ですか？</span>
+              <svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5l5 5 5-5" stroke="#1558A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-item__a"><p>医療保険の場合は主治医の「訪問看護指示書」が必要です。介護保険の場合はケアマネージャーにご相談ください。どちらかわからない場合も、まずはお電話ください。担当者が一緒に確認します。</p></div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <button class="faq-item__q" aria-expanded="false">
+              <span>費用の目安を教えてください。</span>
+              <svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5l5 5 5-5" stroke="#1558A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-item__a"><p>医療保険の場合は1〜3割の自己負担（所得・年齢により異なります）。介護保険の場合は要介護度に応じた負担となります。詳しい金額はお気軽にお問い合わせください。</p></div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <button class="faq-item__q" aria-expanded="false">
+              <span>何回くらい訪問してもらえますか？</span>
+              <svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5l5 5 5-5" stroke="#1558A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-item__a"><p>状態や利用する保険により異なりますが、週1〜7回まで対応しています。具体的な訪問頻度はアセスメント後にご提案します。</p></div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <button class="faq-item__q" aria-expanded="false">
+              <span>夜間・休日も対応していますか？</span>
+              <svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5l5 5 5-5" stroke="#1558A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-item__a"><p>24時間365日の緊急対応体制を整えています。夜間・休日もオンコール対応で看護師が電話相談に応じ、必要に応じて緊急訪問します。</p></div>
+          </div>
+
+          <div class="faq-item fade-in">
+            <button class="faq-item__q" aria-expanded="false">
+              <span>対応エリアはどこですか？</span>
+              <svg class="faq-item__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5l5 5 5-5" stroke="#1558A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="faq-item__a"><p>○○市・△△市・□□町を中心に対応しています。エリア外でもご相談によって対応できる場合があります。まずはお問い合わせください。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+         お問い合わせセクション
+         =========================== -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Contact</p>
+          <h2 class="section-title">お問い合わせ</h2>
+          <p class="section-desc">ご相談は無料です。まずはお気軽にご連絡ください。</p>
+        </div>
+
+        <div class="contact__wrap">
+          <!-- 電話 -->
+          <div class="contact__tel-wrap fade-in">
+            <div class="contact__tel-card">
+              <div class="contact__tel-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.22 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.16z"/>
+                </svg>
+              </div>
+              <p class="contact__tel-label">お電話でのご相談</p>
+              <a href="tel:0120XXXXXX" class="contact__tel-num">0120-XXX-XXX</a>
+              <p class="contact__tel-hours">受付：平日 8:30〜17:30<br>緊急時は24時間対応</p>
+            </div>
+          </div>
+
+          <!-- フォーム -->
+          <form class="contact__form fade-in" id="contactForm" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="name">お名前 <span class="required">必須</span></label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="例：山田 花子" required autocomplete="name">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="phone">電話番号</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="例：090-XXXX-XXXX" autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="例：mail@example.com" autocomplete="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">お問い合わせ内容 <span class="required">必須</span></label>
+              <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="ご質問・ご相談内容をご記入ください" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg btn--full" id="submitBtn">送信する</button>
+            <div class="form-result" id="formResult" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===========================
+       フッター
+       =========================== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="container footer__top-inner">
+        <div class="footer__brand">
+          <a href="#hero" class="footer__logo">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <rect width="36" height="36" rx="8" fill="white" opacity="0.15"/>
+              <path d="M18 8v20M8 18h20" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <span class="footer__logo-main">ほほえみ訪問看護ステーション</span>
+              <span class="footer__logo-sub">英知を尽くして「生きる」を看る。</span>
+            </div>
+          </a>
+          <address class="footer__address">
+            〒000-0000 ○○県○○市○○町1-2-3<br>
+            TEL: 0120-XXX-XXX　FAX: 00-0000-0000<br>
+            受付時間：平日 8:30〜17:30
+          </address>
+        </div>
+
+        <nav class="footer__nav" aria-label="フッターナビゲーション">
+          <div class="footer__col">
+            <h4>サービス</h4>
+            <ul>
+              <li><a href="#services">訪問看護</a></li>
+              <li><a href="#services">訪問リハビリテーション</a></li>
+              <li><a href="#services">精神科訪問看護</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>ご利用案内</h4>
+            <ul>
+              <li><a href="#flow">ご利用の流れ</a></li>
+              <li><a href="#faq">よくある質問</a></li>
+              <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>ステーション情報</h4>
+            <ul>
+              <li><a href="#staff">スタッフ紹介</a></li>
+              <li><a href="#message">代表メッセージ</a></li>
+              <li><a href="#recruit">採用情報</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2024 ほほえみ訪問看護ステーション. All Rights Reserved.</p>
+        <ul class="footer__meta">
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">サイトマップ</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===========================
+       チャットボット（右下フローティング）
+       =========================== -->
+  <div class="chat-widget" id="chatWidget">
+    <button class="chat-toggle" id="chatToggle" aria-label="AIアシスタントを開く">
+      <svg class="chat-toggle__icon chat-toggle__icon--chat" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" aria-hidden="true">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg class="chat-toggle__icon chat-toggle__icon--close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" aria-hidden="true">
+        <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/>
+      </svg>
+      <span class="chat-toggle__badge" id="chatBadge">1</span>
+    </button>
+
+    <div class="chat-window" id="chatWindow" aria-hidden="true" role="dialog" aria-label="AIアシスタント">
+      <div class="chat-window__header">
+        <div class="chat-window__header-info">
+          <div class="chat-window__avatar" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+              <path d="M16 4v24M4 16h24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <p class="chat-window__name">AIアシスタント</p>
+            <p class="chat-window__status"><span class="chat-window__dot" aria-hidden="true"></span>オンライン</p>
+          </div>
+        </div>
+        <button class="chat-window__close" id="chatClose" aria-label="チャットを閉じる">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" aria-hidden="true">
+            <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="chat-messages" id="chatMessages" role="log" aria-live="polite">
+        <div class="chat-msg chat-msg--bot">
+          <div class="chat-msg__avatar" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1558A8" stroke-width="2.5" stroke-linecap="round">
+              <path d="M12 2v20M2 12h20"/>
+            </svg>
+          </div>
+          <div class="chat-msg__bubble">
+            こんにちは！ほほえみ訪問看護ステーションです。<br>
+            サービスや費用など、ご質問はお気軽にどうぞ 😊
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-input-area">
+        <input type="text" class="chat-input" id="chatInput" placeholder="メッセージを入力..." aria-label="メッセージ入力" maxlength="500" autocomplete="off">
+        <button class="chat-send" id="chatSend" aria-label="送信" disabled>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" aria-hidden="true">
+            <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/chatbot.js"></script>
+</body>
+</html>

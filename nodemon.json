@@ -1,0 +1,5 @@
+{
+  "watch": ["."],
+  "ext": "js,json,env",
+  "exec": "node --use-system-ca server.js"
+}
