@@ -4,10 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>退院に向けての環境整備 — カタログ表紙デザイン</title>
+  <!-- Google Fonts: 読み込めない環境ではシステムフォントにフォールバック -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&family=Noto+Sans+JP:wght@100;200;300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&family=Noto+Sans+JP:wght@100;200;300&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <style>
+    /* 日本語フォールバック定義 */
+    :root {
+      --font-serif: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro',
+                    'Yu Mincho', '游明朝', 'MS Mincho', 'ＭＳ 明朝',
+                    'IPAMincho', Georgia, 'Times New Roman', serif;
+      --font-sans:  'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans',
+                    'Yu Gothic', '游ゴシック', 'Meiryo', 'メイリオ',
+                    'IPAGothic', 'IPAゴシック', Arial, sans-serif;
+    }
     :root {
       --warm-white: #FAFAF7;
       --sage:        #8FA885;
@@ -33,11 +43,11 @@
       flex-direction: column;
       align-items: center;
       padding: 52px 24px 64px;
-      font-family: 'Noto Serif JP', serif;
+      font-family: var(--font-serif);
     }
 
     .page-label {
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: var(--font-sans);
       font-weight: 200;
       font-size: 11px;
       letter-spacing: 0.28em;
@@ -110,7 +120,7 @@
     }
 
     .back-eyebrow {
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: var(--font-sans);
       font-weight: 200;
       font-size: 9px;
       letter-spacing: 0.40em;
@@ -120,7 +130,7 @@
     }
 
     .back-title {
-      font-family: 'Noto Serif JP', serif;
+      font-family: var(--font-serif);
       font-weight: 200;
       font-size: 34px;
       letter-spacing: 0.12em;
@@ -137,7 +147,7 @@
     }
 
     .back-copy {
-      font-family: 'Noto Serif JP', serif;
+      font-family: var(--font-serif);
       font-weight: 200;
       font-size: 11.5px;
       letter-spacing: 0.10em;
@@ -146,7 +156,7 @@
     }
 
     .back-tags {
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: var(--font-sans);
       font-weight: 200;
       font-size: 8.5px;
       letter-spacing: 0.22em;
@@ -164,7 +174,7 @@
     }
 
     .back-footnote {
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: var(--font-sans);
       font-weight: 100;
       font-size: 8px;
       letter-spacing: 0.15em;
@@ -202,7 +212,7 @@
     .spine-text {
       writing-mode: vertical-rl;
       text-orientation: mixed;
-      font-family: 'Noto Serif JP', serif;
+      font-family: var(--font-serif);
       font-weight: 200;
       font-size: 8px;
       letter-spacing: 0.18em;
@@ -267,7 +277,7 @@
     }
 
     .front-eyebrow {
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: var(--font-sans);
       font-weight: 200;
       font-size: 8.5px;
       letter-spacing: 0.42em;
@@ -277,7 +287,7 @@
     }
 
     .front-title {
-      font-family: 'Noto Serif JP', serif;
+      font-family: var(--font-serif);
       font-weight: 200;
       color: var(--charcoal);
       line-height: 1.58;
@@ -299,7 +309,7 @@
     }
 
     .front-tagline {
-      font-family: 'Noto Serif JP', serif;
+      font-family: var(--font-serif);
       font-weight: 200;
       font-size: 10.5px;
       letter-spacing: 0.13em;
@@ -312,7 +322,7 @@
       position: absolute;
       right: 56px;
       bottom: 56px;
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: var(--font-sans);
       font-weight: 100;
       font-size: 8px;
       letter-spacing: 0.30em;
@@ -548,7 +558,7 @@
 
   <p style="
     margin-top: 26px;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: var(--font-sans);
     font-weight: 200;
     font-size: 10px;
     letter-spacing: 0.20em;
